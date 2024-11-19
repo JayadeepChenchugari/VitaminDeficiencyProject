@@ -1,0 +1,178 @@
+/* General Body Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top */
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Container Styles */
+.container {
+    background: #ffffff;
+    color: #333;
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* Heading Styles */
+.container h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Paragraph Styles */
+.container p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+/* Input and Button Styles */
+.input-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+input[type="file"] {
+    font-size: 1.2rem;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px dashed #e74c3c;
+    background: #fff;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="file"]:hover {
+    border-color: #c0392b;
+    background: #fff5f5;
+}
+
+button {
+    background: linear-gradient(45deg, #ff6a6a, #ff4747);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(255, 72, 72, 0.3);
+}
+
+button:hover {
+    background: #c0392b;
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 72, 72, 0.5);
+}
+
+/* Result Section Styles */
+.result {
+    margin-top: 35px;
+    padding: 25px;
+    border: 2px dashed #e74c3c;
+    border-radius: 12px;
+   
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    /* display: none; */
+}
+
+.hidden{
+    display: none;
+}
+
+.result.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.result h3 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+.result p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Recommendations Section */
+.recommendations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.food-item {
+    text-align: center;
+    max-width: 200px;
+    margin: 10px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+
+.food-item:hover {
+    transform: scale(1.1);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.8);
+}
+
+.food-item img.food-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.food-item p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+        max-width: 95%;
+    }
+
+    .input-container {
+        flex-direction: column;
+    }
+
+    input[type="file"], button {
+        width: 100%;
+    }
+
+    .food-item {
+        max-width: 150px;
+    }
+}
